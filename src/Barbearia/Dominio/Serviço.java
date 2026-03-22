@@ -24,6 +24,7 @@ public class Serviço {
         System.out.println("Tipo: " + tipoServico);
         System.out.println("Valor: " + valor);
         System.out.println("Pagamento: " + formaPagamento);
+        System.out.println("-----------------------");
     }
     public String getBarbeiro() {
         return barbeiro;

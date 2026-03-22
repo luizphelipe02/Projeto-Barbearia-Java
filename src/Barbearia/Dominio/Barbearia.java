@@ -11,6 +11,7 @@ public class Barbearia {
 
 
     public Barbearia(String nome) {
+        this();
         this.nome = nome;
     }
     public Barbearia(){
@@ -29,7 +30,8 @@ public class Barbearia {
         System.out.println("OPÇÕES ABAIXO !");
         System.out.println("1 - Adicionar Serviço");
         System.out.println("2 - Adicionar Despesa");
-        System.out.println("3 - Sair");
+        System.out.println("3 - Mostrar Serviços");
+        System.out.println("4 - Sair");
         System.out.print("Qual opção deseja escolher? ");
 
     }
@@ -57,14 +59,10 @@ public class Barbearia {
         for(int i = 0; i < quantidadeServicos; i++){
             serviços[i].imprimir();
         }
+
+
+
     }
-
-
-
-
-
-
-
 
     public Serviço[] getServiços() {
         return serviços;

@@ -18,7 +18,7 @@ public class main {
         Serviço[] serviços = {};
 
         int op =-1;
-        while (op != 0) {
+        while (op != 4) {
             barbearia.menuInicial();
             op = scanner.nextInt();
             scanner.nextLine();
@@ -28,9 +28,23 @@ public class main {
 
             } else if (op == 2) {
                 break;
-
             }else if (op == 3 ){
                 barbearia.mostrarServicos();
+                while (true) {
+                    System.out.println("Deseja voltar ao menu? S/N");
+                    String resposta = scanner.nextLine();
+                    if (resposta.equalsIgnoreCase("S")) {
+                        break;
+                    } else if (resposta.equalsIgnoreCase("N")) {
+                        op = 4;
+                        break;
+
+                    } else {
+                        System.out.println("Resposta invalida");
+                    }
+                }
+            }else if (op == 4 ){
+                break;
             }
         }
 
