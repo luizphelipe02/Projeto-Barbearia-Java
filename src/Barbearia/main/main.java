@@ -25,9 +25,8 @@ public class main {
 
             if (op == 1){
                 barbearia.adicionarServiço(scanner);
-
             } else if (op == 2) {
-                break;
+                barbearia.adicionarDespesa(scanner);
             }else if (op == 3 ){
                 barbearia.mostrarServicos();
                 while (true) {
@@ -44,6 +43,21 @@ public class main {
                     }
                 }
             }else if (op == 4 ){
+                barbearia.mostrarDespesa();
+                while (true) {
+                    System.out.println("Deseja voltar ao menu? S/N");
+                    String resposta = scanner.nextLine();
+                    if (resposta.equalsIgnoreCase("S")) {
+                        break;
+                    } else if (resposta.equalsIgnoreCase("N")) {
+                        op = 4;
+                        break;
+
+                    } else {
+                        System.out.println("Resposta invalida");
+                    }
+                }
+            }else if (op == 5 ){
                 break;
             }
         }

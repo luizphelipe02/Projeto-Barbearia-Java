@@ -7,6 +7,7 @@ public class Barbearia {
     private Serviço[] serviços;
     private Despesa[] despesas;
     private int quantidadeServicos;
+    private int quantidadeDespesas;
 
 
 
@@ -17,6 +18,9 @@ public class Barbearia {
     public Barbearia(){
         serviços = new Serviço[100];
         quantidadeServicos = 0;
+        despesas = new Despesa[100];
+        quantidadeDespesas = 0;
+
     }
 
     public Barbearia(String nome, Serviço[] serviços, Despesa[] despesas) {
@@ -31,7 +35,8 @@ public class Barbearia {
         System.out.println("1 - Adicionar Serviço");
         System.out.println("2 - Adicionar Despesa");
         System.out.println("3 - Mostrar Serviços");
-        System.out.println("4 - Sair");
+        System.out.println("4 - Mostrar Despesas");
+        System.out.println("5 - Sair");
         System.out.print("Qual opção deseja escolher? ");
 
     }
@@ -61,6 +66,24 @@ public class Barbearia {
         }
 
 
+
+    }
+    public void mostrarDespesa(){
+        for(int i = 0; i < quantidadeDespesas; i++){
+            despesas[i].imprimir();
+        }
+    }
+    public void adicionarDespesa(Scanner scanner){
+        System.out.println("Adicionando Despesas...");
+        System.out.println("Qual tipo de despesa: ");
+        String tpDespesa = scanner.nextLine();
+
+        System.out.println("Qual valor da despesa?");
+        double vlDespesa = scanner.nextDouble();
+
+        Despesa despesa = new Despesa(tpDespesa, vlDespesa);
+        despesas[quantidadeDespesas] = despesa;
+        quantidadeDespesas ++;
 
     }
 
